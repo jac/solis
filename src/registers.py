@@ -1,5 +1,5 @@
 # MODBUS Registers, prometheus name and description
-# Add * in front of the register name if you do not want it to be presented to Prometheus or published to MQTT
+# Add * in front of the register name if you do not want it to be presented to Prometheus
 
 all_regs = (
     (33022, (
