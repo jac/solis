@@ -1,16 +1,15 @@
-FROM python:3-alpine
+FROM python:3.10-slim-bullseye
 
 EXPOSE 18000
 
-LABEL MAINTAINER="Andrius Kozeniauskas"
-LABEL NAME=solismon3
+LABEL MAINTAINER="James Cotter"
+LABEL NAME=solis
 
-RUN mkdir /solismon3
-COPY *.py *.txt /solismon3/
+RUN mkdir /solis
+COPY *.py *.txt /solis
 
-WORKDIR /solismon3
+WORKDIR /solis
 
-RUN pip install --upgrade pip \
-  && pip3 install -r requirements.txt
+RUN pip3 install --no-cache-dir -r requirements.txt
 
 CMD [ "python", "./main.py" ]
